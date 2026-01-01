@@ -1,16 +1,56 @@
-# React + Vite
+# Parking MiniApp - Super Qi Integration
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based parking management MiniApp integrated with Super Qi payment and authentication system.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Authentication**: Integration with Super Qi using hylid-bridge for MiniApp authentication
+- **Payment Processing**: Secure payment processing using Super Qi's tradePay API
+- **Session Management**: Track parking sessions with time-based pricing
+- **Modern UI**: Built with React and Vite for fast development and performance
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React + Vite
+- React Router for navigation
+- hylid-bridge for MiniApp integration
+- Tailwind CSS (via CDN)
 
-## Expanding the ESLint configuration
+## Setup
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Install dependencies:
+```bash
+npm install
+```
+
+2. Start development server:
+```bash
+npm run dev
+```
+
+## API Integration
+
+### Authentication
+- Endpoint: `https://its.mouamle.space/api/auth-with-superQi`
+- Uses `my.getAuthCode()` from hylid-bridge to get auth code
+- Stores token in localStorage for subsequent requests
+
+### Payment
+- Endpoint: `https://its.mouamle.space/api/payment`
+- Uses `my.tradePay()` from hylid-bridge for payment processing
+
+## Project Structure
+
+```
+src/
+  ├── components/     # React components
+  ├── lib/           # Utility functions and API calls
+  │   ├── api.js     # API integration functions
+  │   ├── session.js # Session management
+  │   └── hostToken.js # Token handling
+  └── styles/        # CSS styles
+```
+
+## License
+
+MIT
