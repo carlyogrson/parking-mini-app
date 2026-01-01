@@ -1,0 +1,27 @@
+/* Small component helpers */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.card {
+  background: var(--surface);
+  color: var(--text);
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+button {
+  background: var(--surface);
+  color: var(--text);
+  border-radius: var(--radius);
+  padding: 0.5rem 0.8rem;
+}
+
+.container { padding: 0.5rem }
+
+.card-title { font-size: 1.05rem; font-weight:700 }
+
+.muted { color: var(--muted) }

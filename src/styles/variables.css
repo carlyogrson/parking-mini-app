@@ -1,0 +1,18 @@
+:root {
+  --bg: #121212;
+  --surface: #1a1a1a;
+  --text: rgba(255, 255, 255, 0.87);
+  --muted: rgba(255, 255, 255, 0.6);
+  --primary: #646cff;
+  --radius: 8px;
+}
+
+/* Light theme overrides */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #ffffff;
+    --surface: #f9f9f9;
+    --text: #213547;
+    --muted: rgba(33, 53, 71, 0.6);
+  }
+}

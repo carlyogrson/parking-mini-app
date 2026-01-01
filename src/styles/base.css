@@ -1,0 +1,17 @@
+/* Minimal base styles used by the app */
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+img { max-width: 100%; display: block; }
